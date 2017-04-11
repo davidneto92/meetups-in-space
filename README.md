@@ -9,5 +9,5 @@ An event hosting site run on Sinatra. This site uses Github account log in funct
 5. Management of comments by event creator
 
 
-**Note**
+**Note:**
 This program was created for an assignment from Launch Academy.
