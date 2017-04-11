@@ -1,0 +1,25 @@
+<h2>Create a new Meetup</h2>
+
+<form id="meetup-form" action="/meetups/new" method="post">
+
+  <div>
+    <label for="name">Meetup Name:</label>
+    <input type="text" id="name" name="new_meetup[name]" value="<%= @new_meetup.name %>">
+  </div>
+
+  <div>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="new_meetup[location]" value="<%= @new_meetup.location %>">
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <textarea rows="12" cols="50" id="description" name="new_meetup[description]" value="<%= @new_meetup.description %>"></textarea>
+  </div>
+  <br>
+
+  <input id="submit-meetup" type="submit" value="Add Meetup">
+
+</form>
+
+<br><br><br><a href="/meetups"><h2>Back to all meetups</h2></a>

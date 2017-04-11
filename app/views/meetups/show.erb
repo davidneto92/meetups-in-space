@@ -1,0 +1,55 @@
+<h2><%= "#{@current_meetup.name}" %></h2>
+<div class="event-page">
+
+  <ul id="curret-meetup" class="container">
+    <li>Creator:<p><%= "#{@creator_username}" %></li></p>
+    <li>Location:<p><%= "#{@current_meetup.location}" %></p></li>
+    <li>Description:<p><%= "#{@current_meetup.description}" %></p></li>
+  </ul>
+
+  <h4>Attendees</h4>
+  <div class="list-and-buttons">
+
+    <div class="attendee-list">
+      <table class="attendee-table">
+        <col width="150">
+        <col width="200">
+        <col width="150">
+        <col width="200">
+        <% @attending_users.each_with_index do |attendee, index| %>
+          <% if index.even? %>
+            <tr>
+          <% end %>
+
+          <td class="table-avatar">
+            <img class="attending-avatar" alt="<%= "#{attendee.username} avatar"%>" src="<%= "#{attendee.avatar_url}"%>" >
+          </td>
+
+          <td class="table-username"><%= "#{User.where(uid: attendee.uid)[0].username}" %></td>
+
+          <% if index.odd? %>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+    </div>
+
+    <div class="buttons">
+      <form action="<%= "/meetups/" + "#{@current_meetup.id}" %>" method="post">
+        <button id="join" type="submit">Join<br>Meetup</button>
+      </form>
+      <% if @meetup_creator == true %>
+
+        <form action="<%= "/meetups/edit/" + "#{@current_meetup.id}" %>" method="post">
+          <button id="edit" type="submit">Edit<br>Meetup</button>
+        </form>
+
+        <form action="<%= "/meetups/delete/" + "#{@current_meetup.id}" %>" method="post">
+          <button id="delete" type="submit">Delete<br>Meetup</button>
+        </form>
+
+      <% end %>
+    </div>
+
+  </div>
+</div>

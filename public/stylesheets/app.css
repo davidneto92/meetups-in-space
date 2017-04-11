@@ -1,0 +1,140 @@
+body {
+  background-image: url('/images/stardust.png');
+  color: #FFFFFF;
+}
+
+a,
+a:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  background-color: #3C3C3C;
+}
+
+.top-bar-section {
+  display: inline-block;
+  float: right;
+}
+
+.top-bar-section li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.logo {
+  display: inline-block;
+  margin: 1em 0;
+}
+
+.flash {
+  padding: 1em;
+  background-color: #3B9089;
+}
+
+li p {
+  font-weight: normal;
+  padding-left: 25px;
+  margin-top: 5px;
+  color: white;
+}
+
+h2, h4 {
+  color: #EFF5FF;
+}
+
+#curret-meetup li {
+  color: #EFF5FF;
+  font-weight: bold;
+}
+
+a:hover, a h2:hover {
+  color: #99ccff;
+}
+
+.list-and-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.attendee-list {
+  display: inline-block;
+  margin: 0px;
+  overflow-y: scroll;
+  /*I want to use auto this when ready*/
+  height: 33em;
+  width: 50em;
+}
+
+.table-avatar {
+  height: 100px;
+  padding: 10px;
+}
+
+.attending-avatar {
+  height: 150px;
+  width: 150px;
+}
+
+.buttons {
+  /*display: inline-block;*/
+  flex-direction: column;
+  margin: auto;
+}
+
+#join {
+  color: #444349;
+  background-color: #3baf45;
+  font-weight: bold;
+  padding: 1.5em;
+  margin: auto;
+}
+
+#edit {
+  color: #444349;
+  background-color: #f48c42;
+  font-weight: bold;
+  padding: 1.5em;
+  margin: auto;
+}
+
+#delete {
+  color: #EFF5FF;
+  background-color: #bf3333;
+  font-weight: bold;
+  padding: 1.5em;
+  margin: auto;
+}
+
+/*.table-username {
+padding-right: 10px;
+}*/
+
+/* --------------------------- */
+
+#new-meetup-form input, textarea {
+  display: flex;
+  color: black;
+}
+
+textarea {
+  resize: none;
+  width: 30em;
+  height: 15em;
+}
+
+#submit-meetup {
+  background-color: #EFF5FF;
+  border: 2px, #444349;
+  color: #444349;
+}
+
+#name, #location {
+  width: 30em;
+}
